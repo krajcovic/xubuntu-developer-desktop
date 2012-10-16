@@ -32,3 +32,6 @@ url = git://github.com/lukasz-kaniowski/postgresql.git
 [submodule "cookbooks/mysql"]
 	path = cookbooks/mysql
 	url = git://github.com/opscode-cookbooks/mysql.git
+[submodule "cookbooks/aws"]
+	path = cookbooks/aws
+	url = git://github.com/opscode-cookbooks/aws.git
