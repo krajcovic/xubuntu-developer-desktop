@@ -35,3 +35,6 @@ url = git://github.com/lukasz-kaniowski/postgresql.git
 [submodule "cookbooks/aws"]
 	path = cookbooks/aws
 	url = git://github.com/opscode-cookbooks/aws.git
+[submodule "cookbooks/database"]
+	path = cookbooks/database
+	url = git://github.com/opscode-cookbooks/database.git
