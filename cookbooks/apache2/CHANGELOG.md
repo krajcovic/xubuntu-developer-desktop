@@ -1,3 +1,28 @@
+## v1.2.0:
+
+* [COOK-692] - delete package conf.d files in module recipes, for EL
+* [COOK-1693] - Foodcritic finding for unnecessary string interpolation
+* [COOK-1757] - platform_family and better style / usage practices
+
+## v1.1.16:
+
+re-releasing as .16 due to error on tag 1.1.14
+
+* [COOK-1466] - add `mod_auth_cas` recipe
+* [COOK-1609] - apache2 changes ports.conf twice per run when using
+  apache2::mod_ssl
+
+## v1.1.12:
+
+* [COOK-1436] - restore apache2 web_app definition
+* [COOK-1356] - allow ExtendedStatus via attribute
+* [COOK-1403] - add mod_fastcgi recipe
+
+## v1.1.10:
+
+* [COOK-1315] - allow the default site to not be enabled
+* [COOK-1328] - cookbook tests (minitest, cucumber)
+
 ## v1.1.8:
 
 * Some platforms with minimal installations that don't have perl won't

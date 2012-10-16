@@ -3,8 +3,9 @@ maintainer_email  "cookbooks@opscode.com"
 license           "Apache 2.0"
 description       "Installs and configures all aspects of apache2 using Debian style symlinks with helper definitions"
 long_description  IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version           "1.1.8"
+version           "1.2.0"
 recipe            "apache2", "Main Apache configuration"
+recipe            "apache2::logrotate", "Rotate apache2 logs. Requires logrotate cookbook"
 recipe            "apache2::mod_alias", "Apache module 'alias' with config file"
 recipe            "apache2::mod_apreq2", "Apache module 'apreq'"
 recipe            "apache2::mod_auth_basic", "Apache module 'auth_basic'"
@@ -26,6 +27,7 @@ recipe            "apache2::mod_env", "Apache module 'env'"
 recipe            "apache2::mod_expires", "Apache module 'expires'"
 recipe            "apache2::mod_fcgid", "Apache module 'fcgid', package on ubuntu/debian, rhel/centos, compile source on suse; with config file"
 recipe            "apache2::mod_headers", "Apache module 'headers'"
+recipe            "apache2::mod_include", "Apache module 'include'"
 recipe            "apache2::mod_ldap", "Apache module 'ldap'"
 recipe            "apache2::mod_log_config", "Apache module 'log_config'"
 recipe            "apache2::mod_mime", "Apache module 'mime' with config file"
@@ -73,7 +75,7 @@ attribute "apache/binary",
   :description => "Apache server daemon program",
   :default => "/usr/sbin/apache2"
 
-attribute "apache/icondir", 
+attribute "apache/icondir",
   :display_name => "Apache Icondir",
   :description => "Directory location for icons",
   :default => "/usr/share/apache2/icons"
