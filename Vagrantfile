@@ -17,14 +17,14 @@ Vagrant::Config.run do |config|
     # VM customization
     config.vm.customize [
       "modifyvm", :id,
-      "--name", "Developer space",
+      "--name", "Xubuntu developer desktop",
       "--memory", "2048",
       "--cpus", "4",
       "--vram", "128"
     ]
 
   # Boot with a GUI so you can see the screen. (Default is headless)
-  config.vm.boot_mode = :gui
+  #config.vm.boot_mode = :gui
 
   # Assign this VM to a host-only network IP, allowing you to access it
   # via the IP. Host-only networks can talk to the host machine as well as
@@ -77,6 +77,7 @@ Vagrant::Config.run do |config|
      chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
   #   chef.roles_path = "../my-recipes/roles"
   #   chef.data_bags_path = "../my-recipes/data_bags"
+  chef.add_recipe "apt"
   chef.add_recipe "mysql"
   chef.add_recipe "git"
   chef.add_recipe "build-essential"
