@@ -13,3 +13,11 @@ url = git://github.com/opscode-cookbooks/users.git
 [submodule "cookbooks/chef-solo-search"]
 path = cookbooks/chef-solo-search
 url = git://github.com/edelight/chef-solo-search.git
+
+[submodule "cookbooks/vim"]
+path = cookbooks/vim
+url = git://github.com/opscode-cookbooks/vim.git
+
+[submodule "cookbooks/postgresql"]
+path = cookbooks/postgresql
+url = git://github.com/lukasz-kaniowski/postgresql.git
